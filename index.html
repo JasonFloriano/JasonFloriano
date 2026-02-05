@@ -23,9 +23,8 @@ img.profile {
   margin: 0 auto 14px auto;
 }
 @media (prefers-color-scheme: dark) {
-  body {
-    background-color: #111;
-    color: #fff;
+  .company-logo {
+    padding: 6px;
   }
 }
 @media (max-width: 480px) {
@@ -60,11 +59,18 @@ img.logo {
   margin: 6px auto 10px auto;
 }
 .company-logo {
-  width: 180px;          /* sweet spot for mobile + desktop */
-  max-width: 70%;
+  width: 200px;          /* adjust if needed */
+  max-width: 80%;
   height: auto;
-  margin: 8px auto 12px auto;
+  margin: 12px auto 6px auto;
   display: block;
+}
+
+/* Dark mode logo swap */
+@media (prefers-color-scheme: dark) {
+  .company-logo {
+    content: url("CoreAndMain_Logo_Dark.png");
+  }
 }
 a.btn:hover {
   background-color: #e6b322;
@@ -78,7 +84,8 @@ a.btn:active {
 <body>
 <div class="card">
 <img src="Jason_Floriano_Headshot_600.jpg" class="profile" alt="Jason Floriano">
-<img src="CoreAndMain_Logo.png" class="company-logo" alt="Core & Main Logo">
+<img src="CoreAndMain_Logo_Dark.png" class="company-logo" alt="Core & Main Logo">
+<img src="CoreAndMain_Logo_Light.png" class="company-logo"alt="Core & Main Logo">
 <h2>Jason Floriano</h2>
 <p><strong>Branch Manager</strong></p>
 <a class="btn" href="Jason_Floriano_CoreAndMain.vcf">Add to Contacts</a>
